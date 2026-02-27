@@ -1,5 +1,5 @@
 # Objectif du projet
-## Apporter un editeur de formes de base au format GeoJSON, ainsi qu’avec la carte Leaflet. 
+ Apporter un editeur de formes de base au format GeoJSON, ainsi qu’avec la carte Leaflet. 
 
 ## La carte leaflet
 LLM Chat GPT pour les questions rapides et morceaux de codes (à condition de bien comprendre notre code)
