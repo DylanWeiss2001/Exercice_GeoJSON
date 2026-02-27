@@ -1,0 +1,299 @@
+      
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+      
+#map {
+        height: 100%;
+        width: 100%;
+}
+
+.button {
+background-color: gray;
+width: 200px;
+}
+
+html, body { height: 100%; margin: 0; }
+
+.screen{
+  height: 100vh;
+  width: 100vw;
+  position: relative;   /* IMPORTANT: parent ancre */
+}
+
+.back{
+  position: absolute;
+  inset: 0;             /* couvre tout */
+}
+
+
+.front{
+  position: absolute;
+  inset: 0;             /* IMPORTANT: couvre tout */
+  z-index: 9999;        /* au-dessus de la carte */
+
+  display: flex;
+  color: white;
+  align-content: space-between;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+  .non_selectionnable{
+
+
+
+    pointer-events: none; 
+
+  }
+
+
+  .proprietes{
+
+
+padding: 0.1cm;
+padding-bottom: 0.5cm;
+padding-left: 0.4cm;
+
+
+background: rgba(0, 0, 0, 0.3);
+border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(10px);
+
+  user-select: auto;
+  pointer-events: auto;
+
+
+  }
+
+
+  .Marge_interne{
+
+  margin: 1.2rem;
+  background: black;
+  padding: 1.2rem;
+  color: blue;
+
+  }
+
+
+  .fenetre_gauche{
+    
+  
+  width: 8cm;
+
+background: linear-gradient(90deg,rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.31) 50%, rgba(0, 0, 0, 0) 100%);
+
+padding-left: 2cm;
+padding-right: 3cm;
+padding-top: 2cm;
+
+
+
+
+  }
+
+
+    .fenetre_droite{
+    
+  
+  width: 10cm;
+background: #000000;
+background: linear-gradient(270deg,rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.31) 50%, rgba(0, 0, 0, 0) 100%);
+
+padding-left: 4cm;
+padding-right: 2cm;
+padding-top: 2cm;
+
+
+
+
+  }
+
+
+
+
+
+  .space{
+
+  margin-top: 1rem;
+
+  }
+
+    .space_2{
+
+  margin-top: 4rem;
+
+  }
+
+
+  .action_1{
+
+  /* background: rgba(0,0,0,0.5); */
+  /* position: relative; */
+
+  display: flex;
+
+
+  flex-direction: row;  /* par défaut, mais explicite */
+    align-items: center;
+
+    gap: 0.25cm;
+    padding-top: 0.25cm;
+    padding-bottom: 0.25cm;
+
+  }
+
+
+    .bouton_1{
+
+  /* background: rgba(0,0,0,0.5); */
+  /* position: relative; */
+
+  display: flex;
+
+  height : 1.5cm;
+  width : 1.5cm;
+
+  user-select: none;
+  pointer-events: auto;
+
+  align-items: center;
+  justify-content: center;
+
+background: rgba(0, 0, 0, 0.3);
+border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(10px);
+
+  font-size: 1.5rem;
+
+
+  }
+
+      .bouton_2{
+
+  /* background: rgba(0,0,0,0.5); */
+  /* position: relative; */
+
+  display: flex;
+
+  height : 1.5cm;
+  width : 100%;
+
+    user-select: none;
+  pointer-events: auto;
+
+  align-items: center;
+  justify-content: center;
+
+background: rgba(0, 0, 0, 0.3);
+border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(10px);
+
+
+  }
+
+
+
+  .masquer{
+
+  display: none;
+
+  }
+  
+
+  .ligne_3_boutons{
+
+  /* background: rgba(0,0,0,0.5); */
+  /* position: relative; */
+
+  gap: 0.25cm;
+  display: flex;
+
+  height : 1.5cm;
+
+  width : 100%;
+
+  align-items: center;
+  justify-content: center;
+
+
+  }
+
+      .texte_bouton_1{
+
+  /* background: rgba(0,0,0,0.5); */
+  /* position: relative; */
+
+  display: flex;
+
+  height : 1.5cm;
+
+  align-items: center;
+  justify-content: center;
+
+  }
+
+
+  .colonne_gauche_explorateur_boutons{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  }
+
+  .colonne_droite_explorateur_boutons{
+
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1cm;
+  width: 100%;
+
+  }
+
+  .Ligne_explorateur{
+
+background: rgba(0, 0, 0, 0.3);
+border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(10px);
+
+    user-select: auto;
+  pointer-events: auto;
+
+    width: 100%;
+
+  }
+
+  .ligne_descriptive_titre{
+
+  margin-left: 0.1cm;
+  font-size: 1.5rem;
+
+  }
+
+    .ligne_descriptive_titre_2{
+
+  margin-left: 0.1cm;
+  font-size: 1.5rem;
+
+  }
+
+    .ligne_descriptive_action{
+
+  margin-left: 0.1cm;
+
+
+  }

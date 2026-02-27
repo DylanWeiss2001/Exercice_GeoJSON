@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>my-react-app</title>
+
+     <link rel="stylesheet" href="style.css" >
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+         crossorigin=""></script>
+
+
+      <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+      <script src="script.js" defer></script>
+
+  </head>
+  <body>
+
+
+
+    <div class="screen">
+      <div class="back"><div id="map"></div></div>
+
+
+
+      <div class="front non_selectionnable">
+        <div class="fenetre_gauche">
+            <div class="action_1">
+                <div class="bouton_1" id="CD_OFF">
+                    🖑
+                </div>
+                <div class="texte_bouton_1">
+                    Mode déplacement vue
+                </div>
+            </div>
+            <div class="action_1" id="CD">
+                <div class="bouton_1" id="CD_ON">
+                    ✥
+                </div>
+                <div class="texte_bouton_1">
+                    Mode déplacement objets
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="action_1">
+                <div class="bouton_1" id="Bouton_creation_triangle">
+                    ▲
+                </div>
+                <div class="texte_bouton_1">
+                    Créer triangle
+                </div>
+            </div>
+            <div class="action_1" id="Bouton_creation_carre">
+                <div class="bouton_1">
+                    ■
+                </div>
+                <div class="texte_bouton_1">
+                    Créer carré
+                </div>
+            </div>
+                <div class="action_1">
+                <div class="bouton_1" id="Bouton_creation_pentagone">
+                    ⭓
+                </div>
+                <div class="texte_bouton_1">
+                    Créer pentagone
+                </div>
+            </div>
+            <div class="space_2"></div>
+            <div class="action_1">
+                <div class="ligne_descriptive_titre">
+                    GeoJSON :
+                </div>
+            </div>
+            <div class="action_1">
+                <div class="bouton_2" id="importer">
+                    Importer
+                </div>
+            </div>
+            <div class="action_1">
+                <div class="bouton_2">
+                    Exporter
+                </div>
+            </div>
+        </div>
+      
+
+
+
+
+
+        <div class="fenetre_droite">
+            <div class="action_1">
+                <div class="ligne_descriptive_titre_2">
+                    Liste des éléments :
+                </div>
+            </div>
+            <div class="action_1">
+                <div class="colonne_gauche_explorateur_boutons">
+                    <div class="bouton_1" id="Explorateur_Fleche_Haut">
+                        ⮝
+                    </div>
+                    <div class="bouton_1" id="Explorateur_Fleche_Bas">
+                        ⮟
+                    </div>
+                </div>
+                <div class="colonne_droite_explorateur_boutons">
+                    <div class="Ligne_explorateur" data-index="1" id="Explorateur_Objet_1"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="2" id="Explorateur_Objet_2"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="3" id="Explorateur_Objet_3"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="4" id="Explorateur_Objet_4"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="5" id="Explorateur_Objet_5"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="6" id="Explorateur_Objet_6"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="7" id="Explorateur_Objet_7"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="8" id="Explorateur_Objet_8"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="9" id="Explorateur_Objet_9"><div class="Marge_interne">Ligne_explorateur</div></div>
+                    <div class="Ligne_explorateur" data-index="10" id="Explorateur_Objet_10"><div class="Marge_interne">Ligne_explorateur</div></div>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="action_1">
+                <div class="bouton_2" id="Bouton_supprimer">
+                    supprimer
+                </div>
+                <div class="bouton_2" id="Bouton_duppliquer">
+                    duppliquer
+                </div>
+            </div>
+            <div class="action_1">
+                <div class="bouton_2" id="Choix_Operation">
+                    Opérations
+                </div>
+                <div class="ligne_3_boutons">
+                <div class="bouton_2" id="Operation_Mode_1">
+                    U
+                </div>
+                <div class="bouton_2" id="Operation_Mode_2">
+                    D
+                </div>
+                <div class="bouton_2" id="Operation_Mode_3">
+                    I
+                </div>
+                </div>
+
+            </div>
+            <div class="action_1">
+                <div class="ligne_descriptive_action">
+                    lignes descriptive action
+                </div>
+            </div>
+            <div class="proprietes">
+         <p>Nom</p>
+         <input type="text" id="valeur_affiche_1" name="valeur_affiche_1"></label><br>
+         <p>Couleur</p>
+         <input type="text" id="valeur_affiche_2" name="valeur_affiche_2"></label><br>
+         <p>Coordonées</p>
+         <input type="text" id="valeur_affiche_3" name="valeur_affiche_3"></label><br>
+            </div>
+        </div>
+
+
+
+      
+      </div>
+    </div>
+
+
+           
+
+         <!-- import d'un fichier geojson ou json -->
+         <input type="file" class="masquer" id="fileInput" accept=".geojson,.json">
+
+
+
+
+
+
+
+
+
+
+
+
+         <input type="text" class="masquer" id="valeur_affiche_4" name="valeur_affiche_4"></label><br>
+         <input type="text" class="masquer" id="valeur_affiche_5" name="valeur_affiche_5"></label><br>
+         <input type="text" class="masquer" id="valeur_affiche_6" name="valeur_affiche_6"></input><br>
+
+
+
+
+         
+
+       
+
+
+  </body>
+</html>
+
+
